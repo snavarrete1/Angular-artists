@@ -1,0 +1,17 @@
+<h1>La Femme</h1>
+<h2>Create an artist's bio below</h2>
+<form [formGroup] = "artistsForm" (ngSubmit) = "onSubmit()">
+    <label for="artistsName">Artist's Name</label>
+    <input [(ngModel)] ="artistsNameDisplay" type="text" formControlName = "artistsName">
+    <p>{{ artistsNameDisplay }}</p>
+
+    <label for="artistsDescription">Artist's Description</label>
+    <input [(ngModel)] ="artistsDescriptionDisplay" type="text" formControlName = "artistsDescription">
+    <p>{{ artistsDescriptionDisplay }}</p>
+
+    <label for="artistsCategory">Artist's Category</label>
+    <input [(ngModel)] ="artistsCategoryDisplay" type="text" formControlName = "artistsCategory">
+    <p>{{ artistsCategoryDisplay }}</p>
+
+    <button type="button" (click)="onSubmit()">Submit</button>
+</form>
